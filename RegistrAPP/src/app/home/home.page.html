@@ -1,4 +1,4 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar color="secondary" >
     <ion-title>
       Login
@@ -6,36 +6,39 @@
   </ion-toolbar>
 </ion-header>
 
-
-
-<mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large"></ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <form class="example-form">
-    <mat-form-field class="example-full-width" appearance="fill">
-      <mat-label>Ingrese su Nombre:</mat-label>
-      <input matInput placeholder="Ej: Juan Perez" value="">
-    </mat-form-field>
-  
-    <mat-form-field class="example-full-width" appearance="fill">
-      <mat-label>Ingrese su Contraseña:</mat-label>
-      <input matInput placeholder="123456A." value="">
-    </mat-form-field>
+<ion-content>
+<ion-card>
+<ion-car-header>
+  <ion-card-tittle>Login</ion-card-tittle>
+</ion-car-header>
+<ion-card-content>
+  <form [formGroup]="FormularioLogin">
+  <ion-item>
+  <ion-label position="floating">Nombre</ion-label>
+  <ion-input formControlName="nombre"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Contraseña</ion-label>
+    <ion-input formControlName="password" type="password"></ion-input>
+    </ion-item>
   </form>
+  <ion-button (click)="ingresar()">
+    Ingresar
+  </ion-button>
 
-  <section>
-    <div class="example-label"></div>
-    <div class="example-button-row">
-  
-      <button mat-stroked-button color="primary" >Iniciar Sesión</button>
-    </div>
-  </section>
-  
+  </ion-card-content>
+
+</ion-card>
 </ion-content>
 
+
+<ion-footer>
+
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="end">
+      <ion-button [routerLink]= "['/registrar']">Registrarse</ion-button>
+
+    </ion-buttons>
+    
+  </ion-toolbar>
+</ion-footer>

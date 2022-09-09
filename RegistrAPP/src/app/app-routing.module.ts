@@ -11,6 +11,12 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path:'registrar',
+    loadChildren:()  => import('./registrar/registrar.module').then( m => m.RegistrarPageModule)
+
+
+  },
 ];
 
 @NgModule({

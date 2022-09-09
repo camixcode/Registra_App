@@ -1,5 +1,14 @@
 import { Component } from '@angular/core';
 import { MenuController } from '@ionic/angular';
+import { from } from 'rxjs';
+
+import{
+  FormGroup,
+  FormControl,
+  Validators,
+  FormBuilder
+
+} from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -8,9 +17,22 @@ import { MenuController } from '@ionic/angular';
 })
 export class HomePage {
 
-  constructor(private menuCtrl: MenuController) {}
+  formularioLogin: FormGroup;
 
-  toggleMenu(){
-   this.menuCtrl.toggle();
+  constructor(public fb: FormBuilder) {
+
+    this.formularioLogin=this.fb.group({
+
+      'nombre': new FormControl("",Validators.required),
+      'password': new FormControl("",Validators.required)
+
+    })
+
+
+
   }
+
+
+
+
 }
