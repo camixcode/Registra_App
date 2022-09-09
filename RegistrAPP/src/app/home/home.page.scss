@@ -25,3 +25,56 @@
 #container a {
   text-decoration: none;
 }
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+section {
+  display: table;
+}
+
+.example-label {
+  display: table-cell;
+  font-size: 14px;
+  margin-left: 8px;
+  min-width: 120px;
+}
+
+.example-button-row {
+  display: table-cell;
+  width: 490px;
+}
+
+.example-button-row .mat-button-base {
+  margin: 8px 8px 8px 0;
+}
+
+.example-flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.example-button-container {
+  display: flex;
+  justify-content: center;
+  width: 120px;
+}
+
+:root{
+--ion-color-primary: #43CEBB;
+--ion-color-primary-rgb :67,206,187 ;
+ -ion-color-primary-contrast :#ffffff;
+--ion-color-primary-contrast-rgb: 255 , 255 , 255;
+--ion-color-primary-shade: #3bb5a5;
+--ion-color-primary-tint: #56d3c2;
+
+
+}
